@@ -1,7 +1,28 @@
 aid: martian
 name: Martian
-description: Martian is a company surfaced as a portfolio company of general-catalyst and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Martian operates the Martian Gateway, a unified LLM API that provides access
+  to 200+ AI models from leading providers (OpenAI, Anthropic, and others)
+  through a single OpenAI- and Anthropic-compatible endpoint. Developers point
+  the standard OpenAI or Anthropic SDK at https://api.withmartian.com/v1,
+  authenticate with a bearer API key, and call models using a
+  provider/model-name identifier, with real-time pricing, a usage dashboard, and
+  model routing across providers. Martian is also an AI interpretability research
+  organization, publishing open-source frameworks such as ARES (Agentic Research
+  and Evaluation Suite), K-Steering, RouterBench, and a model-router / judges SDK.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://withmartian.com/favicon.ico
 url: https://raw.githubusercontent.com/api-evangelist/martian/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,12 +32,102 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-apis: []
+- Artificial Intelligence
+- LLM
+- LLM Gateway
+- Model Router
+- Machine Learning
+- Interpretability
+- Inference
+- OpenAI Compatible
+- Developer Tools
+apis:
+- name: Martian Gateway API
+  description: >-
+    Unified, OpenAI- and Anthropic-compatible LLM gateway providing access to
+    200+ models from leading providers through a single endpoint. Documented
+    operations: POST /v1/chat/completions (OpenAI-compatible), POST /v1/messages
+    (Anthropic-compatible), and GET /v1/models (List Models). Bearer API key
+    authentication; models are addressed as provider/model-name.
+  humanURL: https://docs.withmartian.com/gateway
+  baseURL: https://api.withmartian.com/v1
+  tags:
+  - LLM
+  - LLM Gateway
+  - AI
+  - Inference
+  - OpenAI Compatible
+  - Anthropic Compatible
+  properties:
+  - type: Documentation
+    url: https://docs.withmartian.com
+  - type: APIReference
+    url: https://docs.withmartian.com/api-reference
+  - type: GettingStarted
+    url: https://docs.withmartian.com/quickstart
+  - type: Authentication
+    url: authentication/martian-authentication.yml
+  - type: Conventions
+    url: conventions/martian-conventions.yml
+  - type: ErrorCatalog
+    url: errors/martian-error-codes.yml
+  - type: Conformance
+    url: conformance/martian-conformance.yml
+common:
+- type: DomainSecurity
+  url: security/martian-domain-security.yml
+- type: Website
+  url: https://withmartian.com
+- type: DeveloperPortal
+  url: https://docs.withmartian.com
+- type: Documentation
+  url: https://docs.withmartian.com
+- type: APIReference
+  url: https://docs.withmartian.com/api-reference
+- type: GettingStarted
+  url: https://docs.withmartian.com/quickstart
+- type: Support
+  url: https://docs.withmartian.com/resources/support
+- type: Blog
+  url: https://withmartian.com/blog
+- type: GitHubOrganization
+  url: https://github.com/withmartian
+- type: SignUp
+  url: https://app.withmartian.com/
+- type: Login
+  url: https://app.withmartian.com/
+- type: StatusPage
+  url: https://status.withmartian.com
+- type: Packages
+  url: packages/martian-packages.yml
+- type: SDKs
+  url: packages/martian-packages.yml
+- type: Authentication
+  url: authentication/martian-authentication.yml
+- type: Conventions
+  url: conventions/martian-conventions.yml
+- type: ErrorCatalog
+  url: errors/martian-error-codes.yml
+- type: Lifecycle
+  url: lifecycle/martian-lifecycle.yml
+- type: Conformance
+  url: conformance/martian-conformance.yml
+- type: WellKnown
+  url: well-known/martian-well-known.yml
+- type: MCPServer
+  url: mcp/martian-mcp.yml
+- type: LLMsTxt
+  url: llms/martian-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 10
+  pass: local-v1
