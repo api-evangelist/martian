@@ -1,0 +1,36 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.withmartian.com/api-reference/authentication
+docs: https://docs.withmartian.com/api-reference/authentication
+summary:
+  types: [apiKey]
+  api_key_in: [header]
+  header: Authorization
+  scheme: bearer
+  oauth2_flows: []
+schemes:
+- name: BearerApiKey
+  type: http
+  scheme: bearer
+  in: header
+  header_name: Authorization
+  format: 'Authorization: Bearer <API_KEY>'
+  description: >-
+    The Martian Gateway API uses API keys with bearer token authentication.
+    Include the API key in the Authorization header of every request. Keys are
+    created and managed in the Martian Dashboard (app.withmartian.com) under the
+    API Keys section.
+  sources: [docs.withmartian.com/api-reference/authentication]
+key_management:
+  dashboard: https://app.withmartian.com/
+  create: Sign up or log in, navigate to API Keys, create or copy a key.
+  rotation: Rotate keys periodically and immediately if compromised; revoke and
+    regenerate in the Dashboard.
+guidance:
+- Never commit API keys to version control or expose them in client-side code.
+- Store keys in environment variables or a secrets manager (MARTIAN_API_KEY).
+- Monitor usage in the Martian Dashboard to detect unauthorized access.
+notes: >-
+  No OAuth 2.0 / OpenID Connect surface is documented; authentication is
+  API-key-only. When using the official OpenAI or Anthropic SDKs the key is
+  supplied as the SDK api_key with base_url set to https://api.withmartian.com/v1.
